@@ -1,0 +1,55 @@
+body {color: #404040; background-color: white; background-image: url(silverware.jpg);
+	font-family:"Georgia", "Garamond", serif ;
+	  font-size: 11px;}
+
+h1 {font-family:"Lucida Sans Unicode", Helvetica, Arial, sans-serif;font-size: 22px;text-align:center; letter-spacing: 0.25em;color: #A4A400;text-decoration:underline;}
+
+h1 span {background-color:#F0F0F0;}
+
+h2   {font-family:"Lucida Sans Unicode", Helvetica, Arial, sans-serif;
+	font-size: 18px; letter-spacing: 0.25em;
+	background-color: #F0F0F0; color: #A4A400;
+	text-decoration:underline;display:inline;}
+
+a{color:#A4A400;}
+
+p.comment{margin-left:20px;font-style:italic;color:black;background-color:#FFFFA8;}
+		
+
+p.copyright {font-family:Monospace; font-size:11px;color:black;text-align:center; margin-right:800px;}
+	
+
+
+.abreviation {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.abreviation .meaning {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 150%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.abreviation .meaning::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+}
+
+.abreviation:hover .meaning {visibility: visible;}
