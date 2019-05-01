@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>HW 10</title>
+        <meta charset="UTF-8">
+        <style>
+	
+	    h1 {text-align:center}
+            
+            form {
+                width: 300px;
+                border: 15px solid brown;
+                padding: 50px;
+                margin: 20px;
+                background-color: tan
+            }
+            
+            #recipe{width: 500px;
+                border: 15px solid brown;
+                padding: 50px;
+                margin: 20px;
+                background-color: tan}
+
+	    html {
+ 		 background: url(rootbeet.jpg);
+  		 background-size: cover;
+  		 height: 100%;
+  		 overflow: hidden;
+		 }
+            
+                        
+            
+        </style>
+        
+        <script>
+            function recipeDisplay(){
+            flavors = '';
+            soda = '';
+                if(vanilla.checked === true){flavors = "vanilla";}
+                if(chocolate.checked===true){flavors = "chocolate";}
+                if(strawberry.checked===true){flavors = "strawberry";}
+                if(vanilla.checked===true && chocolate.checked===true){flavors = "vanilla and chocolate";}
+                if(vanilla.checked===true && strawberry.checked===true){flavors = "vanilla and strawberry";}
+                if(chocolate.checked===true && strawberry.checked===true){flavors = "chocolate and strawberry";}
+                if(chocolate.checked===true && strawberry.checked===true && vanilla.checked===true){flavors = "chocolate, strawberry, and vanilla";}
+                if(AW.checked === true){soda = "A&W root beer";}
+                if(Barqs.checked===true){soda = "Barq's root beer";}
+                if(Mug.checked===true){soda = "Mug root beer";}
+                document.getElementById('recipe').innerHTML = "The recipe is: One scoop of " + flavors + " icecream, and one cup of " + soda;
+            }
+        </script>
+        
+    </head>
+    <body>
+        <h1>Root Beer Float Recipes</h1>
+        
+        <form>
+        <p>Please select the ice cream flavor(s) that you want.</p>
+        Vanilla <input type="checkbox" name="vanilla" id="vanilla" /><br />
+        Chocolate <input type="checkbox" name="chocolate" id="chocolate"  /><br /> 
+        Strawberry <input type="checkbox" name="strawberry" id="strawberry"  /><br/>
+        </form>
+        
+        <form>
+        <p>Please select the brand of soda you want.</p>
+        AW <input type="radio" name="AW" id="AW"  /><br />
+        Barq's <input type="radio" name="Barq's" id="Barqs"  /><br /> 
+        Mug <input type="radio" name="Mug" id="Mug"  /><br/>
+        </form>
+        <input id="submit" type="submit" value="Submit" onclick="recipeDisplay()" style="margin-left:12.5%">
+        
+        <p id='recipe'>
+         
+        </p>
+        
+	
+    </body>
+</html>
